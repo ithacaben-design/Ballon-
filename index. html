@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panoramic Squirrel Pecker Airship</title>
+    <style>
+        /* This creates the infinitely scrolling panoramic backdrop */
+        .panorama-container {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Hide the image outside the view */
+            position: relative;
+            /* Replace with your saved panoramic asset */
+            background-image: url('your-panorama-image.jpg');
+            background-size: cover;
+            background-repeat: repeat-x; /* Crucial for looping */
+            
+            /* Apply the scrolling animation */
+            animation: scrollPanorama 30s linear infinite;
+        }
+
+        /* The scrolling animation logic */
+        @keyframes scrollPanorama {
+            from { background-position: 0 0; }
+            to { background-position: -100vw 0; }
+            /* This value depends on the aspect ratio of your image and screen width */
+            /* Using vw ensures it loops correctly relative to the viewport. */
+        }
+    </style>
+</head>
+<body>
+    <div class="panorama-container">
+        </div>
+</body>
+</html>
